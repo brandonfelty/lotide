@@ -6,7 +6,11 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 2);
+const head = function(input) {
+  return input[0];
+}
+
+assertEqual(head([5,6,7]), 5);
+assertEqual(head(["hello", "Lighthouse", "Labs"]), "hello");
+assertEqual(head([1]),1);
+assertEqual(head([]), undefined);
