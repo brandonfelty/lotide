@@ -9,17 +9,19 @@ const letterPositions = require('./letterPositions');
 const map = require('./map');
 const reverse = require('./reverse');
 const takeUntil = require('./takeUntil');
+const without= require('./without');
 
 module.exports = {
-  head: head,
-  tail: tail,
-  middle: middle,
-  countLetters: countLetters,
-  countOnly: countOnly,
-  findKey: findKey,
-  findKeyByValue: findKeyByValue,
-  letterPositions: letterPositions,
-  map: map,
-  reverse: reverse,
-  takeUntil: takeUntil
+  head,
+  tail,
+  middle,
+  countLetters,
+  countOnly,
+  findKey,
+  findKeyByValue,
+  letterPositions,
+  map,
+  reverse,
+  takeUntil,
+  without
 };
