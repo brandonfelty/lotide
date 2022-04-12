@@ -50,3 +50,4 @@ assertEqual(result1["e"], 3);
 assertEqual(result1["n"], 1);
 
 
+module.exports = countLetters;

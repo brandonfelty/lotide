@@ -19,3 +19,5 @@ const reverse = function(args) {
 };
 
 console.log(reverse(args));
+
+module.exports = reverse;

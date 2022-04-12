@@ -37,3 +37,5 @@ const results3 = map(['dog', 'cat', 'bird'], animal => `This is a ${animal}`);
 assertArraysEqual(results1, ['g', 'c', 't', 'm', 't']);
 assertArraysEqual(results2, ['GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM']);
 assertArraysEqual(results3, ['This is a dog', 'This is a cat', 'This is a bird']);
+
+module.exports = map;
