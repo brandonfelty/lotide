@@ -44,6 +44,21 @@ const countOnly = function(allItems, itemsToCount) {
   return results;
 }
 
+const newCountOnly = function(allItems, itemsToCount) {
+  // Define new object
+  const results = {}
+  for (const key in itemsToCount) {
+    if (itemsToCount[key]) {
+      firstNames.forEach(name => {
+        if (key === name) {
+          results[key] ? results[key] += 1 : results[key] = 1;
+        }
+      })
+    }
+  }
+  return results;
+}
+
 // TEST CODE
 
 const firstNames = [
@@ -58,7 +73,7 @@ const firstNames = [
   "Joe"
 ];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false});
+const result1 = newCountOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false});
 
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
