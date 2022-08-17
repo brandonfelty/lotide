@@ -24,21 +24,18 @@ const assertArraysEqual = function(array1,  array2) {
 const letterPositions = function(string) {
   let results = {};
 
-  for (let i = 0; i < string.length; i++) {
-
-    if (string[i] !== ' ') {
-      if (results[string[i]]) {
-        results[string[i]].push(i);  //if this index value exsists inside output already and the current index value to output as well
-      } else {
-        results[string[i]] = [i];   //if this letter does NOT exsist within output, add it and set its initial value to 1
-      }
+  [...string].forEach((element, index) => {
+    if (element !== ' ') {
+      results[element] ? 
+        results[element].push(index) : //if this index value exsists inside output already and the current index value to 
+        results[element] = [index];   //if this letter does NOT exsist within output, add it and set its initial value to 1
     }
-  }
+  });
   return results;
 };
+
+
 console.log(letterPositions("hello"));
-
-
 
 const sentence = "hello";
 const test = letterPositions(sentence);
